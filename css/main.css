@@ -69,8 +69,7 @@ body {
   height: 100%;
   display: flex;
   justify-content: space-between;
-}
-
+} 
 .gnb li {
   padding: 10px 15px;
   position: relative;
