@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (activeSlide) {
           activeSlide.classList.add("progress-active");
         }
-        
       },
       slideChangeTransitionEnd: function () {
         console.log("Slide changed");
@@ -130,15 +129,13 @@ document.addEventListener("DOMContentLoaded", function () {
     lineupSlide.style.pointerEvents = "none";
 
     slides.forEach((slide, index) => {
-      // 부드러운 전환을 위한 순차적 애니메이션
-      setTimeout(() => {
-        slide.style.transform = getSlideTransform(index, currentIndex);
-        slide.style.opacity = getSlideOpacity(index, currentIndex);
-        slide.style.zIndex = getSlideZIndex(index, currentIndex);
+      // 모든 슬라이드 동시에 부드럽게 전환
+      slide.style.transform = getSlideTransform(index, currentIndex);
+      slide.style.opacity = getSlideOpacity(index, currentIndex);
+      slide.style.zIndex = getSlideZIndex(index, currentIndex);
 
-        // 활성 클래스 업데이트
-        slide.classList.toggle("active", index === currentIndex);
-      }, index * 50); // 각 슬라이드마다 50ms 지연
+      // 활성 클래스 업데이트
+      slide.classList.toggle("active", index === currentIndex);
     });
 
     // 페이지네이션 업데이트
@@ -204,12 +201,10 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeSlides();
   updatePagination();
 
-  // 자동 재생 (선택사항)
-  /*
-    setInterval(() => {
-        nextSlide();
-    }, 4000);
-    */
+  // 자동 재생
+  setInterval(() => {
+    nextSlide();
+  }, 2200);
 
   // 키보드 네비게이션 (선택사항)
   document.addEventListener("keydown", function (e) {

@@ -69,7 +69,7 @@ body {
   height: 100%;
   display: flex;
   justify-content: space-between;
-} 
+}
 .gnb li {
   padding: 10px 15px;
   position: relative;
@@ -388,7 +388,7 @@ body {
 
 .lineup h2 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   color: var(--main-color);
 }
 
@@ -421,10 +421,13 @@ body {
 /* 카드 기본 스타일 */
 .lineup-list li {
   position: absolute;
-  width: 450px;
+  width: 430px;
   height: 580px;
-  background: #fff;
-  border: 3px solid var(--main-color);
+  background: linear-gradient(
+    to bottom,
+    var(--main-color) 0%,
+    var(--title-color) 100%
+  );
   border-radius: 25px;
   box-shadow: 0 15px 40px rgba(248, 246, 246, 0.1);
   display: flex;
@@ -505,7 +508,7 @@ body {
 /* 카드 텍스트 스타일 */
 .lineup-list li h4 {
   color: #fff;
-  color: var(--main-color);
+  color: var(--point-color);
 }
 
 .lineup-list li p {
@@ -515,7 +518,7 @@ body {
   padding: 10px 0 50px 0;
 
   transition: 0.2s;
-  color: var(--main-color);
+  color: var(--point-color);
 }
 
 .lineup-list li figure img {
@@ -523,6 +526,7 @@ body {
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
   transition: all 0.3s ease;
   border-radius: 50px;
+  transform: translateY(-30px);
 }
 
 /* 카드 효과들 */
@@ -553,18 +557,18 @@ body {
   opacity: 0.8;
 }
 
-/* 호버 효과 */
-.lineup-list li:hover {
+/* 호버 효과 - 중앙(활성) 카드만 적용 */
+.lineup-list li.active:hover {
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
-  transform: translate(-50%, -50%) translateZ(10px) scale(1.02);
+  transform: translate(-50%, -50%) translateZ(10px) scale(1.15);
 }
 
-.lineup-list li:hover p {
+.lineup-list li.active:hover p {
   opacity: 0;
 }
 
-.lineup-list li:hover figure img {
-  transform: translateY(-120px) scale(0.8);
+.lineup-list li.active:hover figure img {
+  transform: translateY(-130px) scale(0.83);
   filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.3));
 }
 
@@ -610,7 +614,7 @@ body {
 /* 라인업 페이지네이션 */
 .lineup-pagination {
   position: absolute;
-  bottom: -80px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
