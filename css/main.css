@@ -917,6 +917,21 @@ body {
 
   color: var(--text-color);
   font-family: pretendard;
+
+  position: relative;
+}
+
+.foot-text::before {
+  content: "";
+  position: absolute;
+  background: url(../img/uiux-jangsoo-logo.png) 50% 50% no-repeat;
+  background-size: contain;
+  width: 60%;
+  height: 60%;
+  left: 60%;
+  bottom: 20%;
+
+  opacity: 0.5;
 }
 
 .foot-link {
