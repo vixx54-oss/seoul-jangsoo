@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+body {
+  background: #f5f4ee;
+}
+
+[data-aos="slide-left"] {
+  transform: translate3d(800px, 0, 0); /* 시작점을 100px 오른쪽으로 설정 */
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition: 1.5s;
+}
+
+[data-aos].aos-animate {
+  transform: translate3d(0, 0, 0); /* 애니메이션 완료 시 원래 위치로 */
+  opacity: 1;
+}
+
+/* ================================ HEADER SECTION  ================================ */
+.header {
+  position: relative;
+}
+
+.header .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 50;
+  background: transparent;
+  transition: background 0.3s;
+  background: #fff;
+}
+
+.header .nav {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 10px 15px;
+}
+
+.logo a {
+  display: block;
+  width: 110px;
+  height: 59px;
+  background: url(../img/header-logo.png) no-repeat 0 0;
+  object-fit: contain;
+  background-size: contain;
+}
+
+.gnb {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.gnb li {
+  padding: 10px 15px;
+  position: relative;
+}
+
+.gnb li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--main-color);
+}
+.gnb li:hover::after {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.gnb a {
+  font-size: 24px;
+  color: var(title-color);
+}
+
+.gnb li:hover a {
+  color: var(--main-color);
+}
+
+.util-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.util-menu li {
+  display: block;
+  padding: 10px;
+}
+/* ================================ MAIN SECTION  ================================ */
+
+.about {
+  padding: 250px 0;
+  text-align-last: left;
+}
+
+.about .info {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.about .info figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.about .info figure img {
+  width: 80%;
+  background-size: contain;
+}
+
+.about .info-text h4 {
+  margin-top: 40px;
+  color: #1c4595;
+}
+.about .info-text p {
+  margin-top: 20px;
+}
+/* ================================ FOOTER SECTION  ================================ */
+.footer .inner {
+  width: 100%;
+  min-height: 502px;
+  background: #ece6d7;
+  display: flex;
+  align-items: center;
+}
+
+.foot-text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 1640px;
+  margin: 0 auto;
+
+  color: var(--text-color);
+  font-family: pretendard;
+
+  position: relative;
+}
+
+.foot-text::before {
+  content: "";
+  position: absolute;
+  background: url(../img/uiux-jangsoo-logo.png) 50% 50% no-repeat;
+  background-size: contain;
+  width: 60%;
+  height: 60%;
+  left: 60%;
+  bottom: 20%;
+
+  opacity: 0.5;
+}
+
+.foot-link {
+  display: flex;
+  gap: 27px;
+}
+
+.foot-link a {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.foot-text address {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+.foot-text address dl {
+  width: 554px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  font-size: 20px;
+}
+
+.foot-text address dl dt {
+  font-weight: 700;
+}
+
+.foot-text address p {
+  font-weight: 600;
+  font-size: 16px;
+}

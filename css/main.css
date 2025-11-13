@@ -30,22 +30,13 @@ body {
   z-index: 50;
   background: transparent;
   transition: background 0.3s;
-}
-
-.header .inner:has(.logo:hover),
-.header .inner:has(.gnb li:hover),
-.header .inner:has(.util-menu li:hover) {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.6) 10%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .header .nav {
   max-width: 1640px;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 5px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,7 +73,7 @@ body {
   left: 0;
   width: 0%;
   height: 4px;
-  background: var(--main-color);
+  background: #0fb348;
 }
 .gnb li:hover::after {
   width: 100%;
@@ -95,7 +86,7 @@ body {
 }
 
 .gnb li:hover a {
-  color: var(--main-color);
+  color: #0fb348;
 }
 
 .util-menu {
@@ -114,8 +105,6 @@ body {
   margin: 0 auto;
   background: #dfdfdf;
   border-radius: 0 0 300px 0;
-
-  box-shadow: 6px 6px 30px rgba(31, 18, 0, 0.6);
 }
 
 .hero .swiper-slide {
@@ -129,7 +118,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
 }
 
 .hero .swiper-slide .inner {
@@ -147,7 +140,7 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .hero .swiper-slide .inner a::after {
@@ -209,7 +202,7 @@ body {
 .hero .swiper-slide .inner p {
   position: relative;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .hero .swiper-slide img {
@@ -313,16 +306,6 @@ body {
   color: var(--main-color);
 }
 
-.jangsu-con .jangsu-text-h h4::before {
-  content: "";
-  position: absolute;
-  left: -10%;
-  top: 0;
-  width: 23px;
-  height: 100%;
-  background: url(../img/fresh_.svg) no-repeat 50% 0% / contain;
-}
-
 .jangsu-con .jangsu-text h4 {
   color: var(--main-color);
 }
@@ -386,7 +369,7 @@ body {
   padding: 150px 0;
 }
 
-.lineup h2 {
+.lineup h3 {
   text-align: center;
   margin-bottom: 20px;
   color: var(--main-color);
@@ -730,7 +713,7 @@ body {
 }
 .pride-list li dl dt {
   z-index: 1;
-  font-size: 38px;
+  font-size: 34px;
 }
 
 .pride-list li dl dd {
@@ -772,8 +755,8 @@ body {
 .time-text .text p {
   margin-top: 50px;
   color: var(--title-color);
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 300;
+  font-size: 20px;
   padding: 0 0 0 25px;
 }
 
@@ -899,6 +882,10 @@ body {
   scale: 1.1;
 }
 
+box-text h3 {
+  font-size: 40px;
+}
+
 /* ================================ FOOTER SECTION  ================================ */
 .footer .inner {
   width: 100%;
@@ -941,7 +928,7 @@ body {
 
 .foot-link a {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   color: var(--main-color);
 }
 
